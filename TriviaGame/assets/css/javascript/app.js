@@ -1,25 +1,17 @@
 //create a trivia form with true/false options (your choice).s
 
 //create questions and answers
-// We declare all variables pertaining to quiz results in an object 
-let triviaQuiz = {
-    correctAnswers: 0,
-    wrongAnswers: 0,
-    noAnswers: 0,
-    time: 20        
-    };
-
-    let clockTimer = 30
-    // This is the interval in which it counts down
-    let countdowning = setInterval(countdown, 1000);
-    console.log(countdowning, "this is a countdown");
+    let clockTimer = 60;
+    // the interval, counts down
+    let countdown = setInterval(countdown, 1000);
+    console.log(countdown);
     ​
     ​
     // Countdown function, clockTimer
-    function countdown() {
+    function countdown1() {
         clockTimer--;
-        document.getElementById("countdown").innerHTML = "Time left " + clockTimer;
-        console.log("TIMER", clockTimer)
+        document.getElementById("countdown1").innerHTML = "Timer" + clockTimer;
+        console.log("Timer", clockTimer);
     ​
         if(clockTimer < 1) {
             timeStop();
@@ -27,27 +19,27 @@ let triviaQuiz = {
     };
     ​
     function timeStop() {
-        clearInterval(countdowning);
-    ​
-        // STILL NEED TO ADD RESULTS PART TO THIS FUNCTION
+        clearInterval(countdown);
     }
   
-  //We declare all quiz questions in an array to be able to compare data easily
+//create an array of questions
+//create questions with answer array inside 
+
   
-  const Questions = [
+  
+  let questions = [
         {
-          question: "The word yellow comes from the Old English word",
+         questions1: "The word yellow comes from the Old English word",
           answers: [
              "upon",
              "geolu",
              "tootsie",
              "yaleu"
           ],
-  
-          correctAnswer: "2"
+            correctAnswer: "2"
         },  
         {
-          question: "The song "Yellow" gave ___________ worldwide fame in the year 2000",
+         questions2: "The song "Yellow" gave ___________ worldwide fame in the year 2000",
           answers: [
              "Coldplay", 
              "The Beatles",
@@ -58,7 +50,7 @@ let triviaQuiz = {
           correctAnswer: "0"
         },
         {
-          question: "The color Yellow is associated to mourning in which country?",
+         questions3: "The color Yellow is associated to mourning in which country?",
           answers: [
              "Columbia",
              "Egypt",
@@ -68,7 +60,7 @@ let triviaQuiz = {
           correctAnswer: "1"
         },
         {
-          question: "Yellow is the color of courage in which country?",
+         questions4: "Yellow is the color of courage in which country?",
           answers: [
              "United States",
              "Nigeria",
@@ -80,7 +72,7 @@ let triviaQuiz = {
         },
   
        {
-          question: "Yellow is an appropriate color for a room used for...",
+         questions5: "Yellow is an appropriate color for a room used for...",
           answers: [
              "time out spot, because it makes people feel sad.",
              "movie room, because black and yellow looks awesome.",
@@ -91,7 +83,7 @@ let triviaQuiz = {
         },
   
         {
-          question: "The creators of post-it notes, made the original post-it notes Yellow because...",
+         questions6: "The creators of post-it notes, made the original post-it notes Yellow because...",
           answers: [
              "They pulled the word Yellow out from a drawing hat, to pick the color.",
              "Inspired by the word "hello" and yelling it." ,
@@ -101,109 +93,6 @@ let triviaQuiz = {
           correctAnswer: "3"
         },
 
-          
-        {
-            question: "",
-            answers: [
-               "Amanda Bynes",
-               "Kel Mitchell",
-               "Keenan Thompson",
-               "Josh Server"
-            ],
-            correctAnswer: "3"
-          },
-
-            
-        {
-            question: "",
-            answers: [
-               "Amanda Bynes",
-               "Kel Mitchell",
-               "Keenan Thompson",
-               "Josh Server"
-            ],
-            correctAnswer: "3"
-          },
-
-            
-        {
-            question: "",
-            answers: [
-               "Amanda Bynes",
-               "Kel Mitchell",
-               "Keenan Thompson",
-               "Josh Server"
-            ],
-            correctAnswer: "3"
-          },
-
-            
-        {
-            question: "",
-            answers: [
-               "Amanda Bynes",
-               "Kel Mitchell",
-               "Keenan Thompson",
-               "Josh Server"
-            ],
-            correctAnswer: "3"
-          }
-  ];
-  
-
-//create timer, start stop, and function
-var n = 16; // modify this for number of seconds to answer
-document.getElementById( 'time').value = "Answer in " + n + " seconds";
-var i = setInterval('count()' , 1000);
-var tooLate;
-
-function count() {
-tooLate = 0;
-n--;
-if(n >=0) {
-document.getElementById( 'time').value = "Answer in " + n + " seconds";
-}
-else {
-clearInterval(i);
-
-alert("Too late!");
-if(document.getElementById( 'answer').value == correct){
-tooLate = 1;
-}
-}
-
-
-function answer() {
-
-var correct = "green"; // This is the correct answer
-if (tooLate == 0) {
-if(document.getElementById( 'answer').value == correct) {
-clearInterval(i);
-alert("Right Answer with " + n + " seconds remaining");
-}
-else{
-clearInterval(i);
-alert("Incorrect! The answer was " + correct);
-}
-}
-
-submitform();
-
-//submit form
-function submitform()
-{
-document.forms["myform"].submit();
-}
-
-}
-
-
-document.getElementById("start").innerHTML("Start");
-document.getElementById("stop").innerHTML("Stop")
-
-
-}
-//create countdown timer
 
 
 
@@ -214,8 +103,8 @@ document.getElementById("stop").innerHTML("Stop")
 //have timer start and end, after player has chosen their answers
 // or if player runs out of time, they lose, game returns to start
 //The game ends when the time runs out. 
-//The page will reveal the number of questions 
+//The page will reveal the number ofquestionss 
 //that player answers correctly and incorrectly.
-//player picks only one answer per question.
+//player picks only one answer perquestions.
 
 

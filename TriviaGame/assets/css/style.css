@@ -5,27 +5,33 @@
     ;
 }
 
-#body {
-background-color: lightblue;
+body {
+
+background-color: yellow;
 font-family: Helvetica;
+font-size: large;
+
+h1 (
+    font-size: x-large;
+    color: black;
+)
 }
 
-#button {
-width: 80%;
+button {
+width: 60%;
 max-width: 950px;
-border: 1px gray solid;
+border: 4px gray solid;
 margin: auto;
 padding: 10px;
 background-color: white;
 border-radius: 10px;
 }
 
-#header {
+header {
 margin-top: 0;
 border: 2px solid black;
 padding: 5px;
 height: 250px;
-background: beige;
-background-image: url("code.jpg");
+background: yellow;
 color: white;
 }

@@ -1,87 +1,153 @@
-//create a trivia form with true/false options (your choice).
-
-let clockTimer = "timeClock"
-let playerGuess =[" "]
-let a= "true"
-let b= "false"
+//create a trivia form with true/false options (your choice).s
 
 //create questions and answers
 // We declare all variables pertaining to quiz results in an object 
-var quiz = {
+let triviaQuiz = {
     correctAnswers: 0,
     wrongAnswers: 0,
     noAnswers: 0,
     time: 20        
     };
+
+    let clockTimer = 30
+    // This is the interval in which it counts down
+    let countdowning = setInterval(countdown, 1000);
+    console.log(countdowning, "this is a countdown");
+    ​
+    ​
+    // Countdown function, clockTimer
+    function countdown() {
+        clockTimer--;
+        document.getElementById("countdown").innerHTML = "Time left " + clockTimer;
+        console.log("TIMER", clockTimer)
+    ​
+        if(clockTimer < 1) {
+            timeStop();
+        }
+    };
+    ​
+    function timeStop() {
+        clearInterval(countdowning);
+    ​
+        // STILL NEED TO ADD RESULTS PART TO THIS FUNCTION
+    }
   
   //We declare all quiz questions in an array to be able to compare data easily
   
-  var myQuestions = [
+  const Questions = [
         {
-          question: "Who Lives In A Pineapple Under The Sea?",
+          question: "The word yellow comes from the Old English word",
           answers: [
-             "Plankton",
-             "Ren & Stimpy",
-             "Spongebob Squarepants",
-             "Avatar"
+             "upon",
+             "geolu",
+             "tootsie",
+             "yaleu"
           ],
   
           correctAnswer: "2"
         },  
         {
-          question: "Who Loves Orange Soda?",
+          question: "The song "Yellow" gave ___________ worldwide fame in the year 2000",
           answers: [
-             "Kel Loves Orange Soda", 
-             "Arnold Loves Orange Soda",
-             "Kora Loves Orange Soda",
-             "Patrick Loves Orange Soda"
+             "Coldplay", 
+             "The Beatles",
+             "Carrie Underwood",
+             "NF"
           ],
   
           correctAnswer: "0"
         },
         {
-          question: "Who Are Timmy's Fairy God Parents?",
+          question: "The color Yellow is associated to mourning in which country?",
           answers: [
-             "Sparkle & Avalon",
-             "Cosmo & Wanda",
-             "Poof & Sparky",
-             "Blonda & Fairwinkle"
+             "Columbia",
+             "Egypt",
+             "Russia",
+             "Estonia"
           ],
           correctAnswer: "1"
         },
         {
-          question: "Who is Rocko's Best Friend?",
+          question: "Yellow is the color of courage in which country?",
           answers: [
-             "Heffer Wolfe",
-             "Mr. BigHead",
-             "Filburt Turtles",
-             "Bev BigHead",
+             "United States",
+             "Nigeria",
+             "Japan",
+             "Greece",
              
           ],
-          correctAnswer: "0"
+          correctAnswer: "2"
         },
   
        {
-          question: "Who is Secretly in Love with Arnold?",
+          question: "Yellow is an appropriate color for a room used for...",
           answers: [
-             "Phoebe",
-             "Rhonda",
-             "Nadine",
-             "Helga"
+             "time out spot, because it makes people feel sad.",
+             "movie room, because black and yellow looks awesome.",
+             "sleeping, because you wake up to the sunshine!",
+             "studying, because it has a stimulating effect on the mind."
           ],
           correctAnswer: "3"
         },
   
         {
-          question: "Which Cast Member Was in All Seasons of All That",
+          question: "The creators of post-it notes, made the original post-it notes Yellow because...",
           answers: [
-             "Amanda Bynes",
-             "Kel Mitchell",
-             "Keenan Thompson",
-             "Josh Server"
+             "They pulled the word Yellow out from a drawing hat, to pick the color.",
+             "Inspired by the word "hello" and yelling it." ,
+             "The team leader loved the color Yellow.",
+             "They were using yellow scratch paper at the time of designing them."
           ],
           correctAnswer: "3"
-        }
+        },
+
+          
+        {
+            question: "",
+            answers: [
+               "Amanda Bynes",
+               "Kel Mitchell",
+               "Keenan Thompson",
+               "Josh Server"
+            ],
+            correctAnswer: "3"
+          },
+
+            
+        {
+            question: "",
+            answers: [
+               "Amanda Bynes",
+               "Kel Mitchell",
+               "Keenan Thompson",
+               "Josh Server"
+            ],
+            correctAnswer: "3"
+          },
+
+            
+        {
+            question: "",
+            answers: [
+               "Amanda Bynes",
+               "Kel Mitchell",
+               "Keenan Thompson",
+               "Josh Server"
+            ],
+            correctAnswer: "3"
+          },
+
+            
+        {
+            question: "",
+            answers: [
+               "Amanda Bynes",
+               "Kel Mitchell",
+               "Keenan Thompson",
+               "Josh Server"
+            ],
+            correctAnswer: "3"
+          }
   ];
   
 

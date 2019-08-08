@@ -1,6 +1,7 @@
-//create a trivia form with true/false options (your choice).s
+//create a trivia game
+//create clock timer and countdown, functions
 
-//create questions and answers
+
     let clockTimer = 60;
     // the interval, counts down
     let countdown = setInterval(countdown, 1000);
@@ -25,7 +26,7 @@
 //create an array of questions
 //create questions with answer array inside 
 
-  
+  let correctAnswer =("")
   
   let questions = [
         {
@@ -36,7 +37,7 @@
              "tootsie",
              "yaleu"
           ],
-            correctAnswer: "2"
+            correctAnswer: ("2")
         },  
         {
          questions2: "The song "Yellow" gave ___________ worldwide fame in the year 2000",
@@ -47,7 +48,7 @@
              "NF"
           ],
   
-          correctAnswer: "0"
+          correctAnswer: ("0")
         },
         {
          questions3: "The color Yellow is associated to mourning in which country?",
@@ -57,7 +58,7 @@
              "Russia",
              "Estonia"
           ],
-          correctAnswer: "1"
+          correctAnswer: ("1")
         },
         {
          questions4: "Yellow is the color of courage in which country?",
@@ -68,7 +69,7 @@
              "Greece",
              
           ],
-          correctAnswer: "2"
+          correctAnswer: ("2")
         },
   
        {
@@ -79,7 +80,7 @@
              "sleeping, because you wake up to the sunshine!",
              "studying, because it has a stimulating effect on the mind."
           ],
-          correctAnswer: "3"
+          correctAnswer: ("3")
         },
   
         {
@@ -90,21 +91,17 @@
              "The team leader loved the color Yellow.",
              "They were using yellow scratch paper at the time of designing them."
           ],
-          correctAnswer: "3"
+          correctAnswer: ("3")
         },
 
+//make function to return results
+function results(correctAnswer) {
+    console.log(correctAnswer)
+    
+}
 
 
 
 
-
-//The player will have a limited amount of time to finish the quiz. 
-// make a timer to begin when the player hits the start button
-//have timer start and end, after player has chosen their answers
-// or if player runs out of time, they lose, game returns to start
-//The game ends when the time runs out. 
-//The page will reveal the number ofquestionss 
-//that player answers correctly and incorrectly.
-//player picks only one answer perquestions.
 
 
